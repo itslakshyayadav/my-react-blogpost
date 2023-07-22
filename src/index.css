@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.bg-blue {
+  background-color: blue;
+}
+
+.text-white {
+  color: white;
+}
+
+.border-none {
+  border: none;
+}
+
+.MR-1 {
+  margin-right: 1rem;
+}
+.width-15rem {
+  width: 15rem;
+}
