@@ -23,27 +23,40 @@ function AddNumber() {
 
   return (
     <>
-      <div className="flex flex-col">
-        <div>
+      <div className="flex flex-col shadow-md p-8 gap-4 rounded-md max-w-4xl mx-auto">
+        <div className="flex flex-col gap-1">
           <label htmlFor="num1" className="MR-1">
             Num 1 :
           </label>
-          <input type="text" id="num1" value={num1} onInput={onNum1Change} />
+          <input
+            type="text"
+            className="border px-3 py-2 rounded"
+            id="num1"
+            value={num1}
+            onInput={onNum1Change}
+          />
         </div>
 
-        <div>
+        <div className="flex flex-col gap-1">
           <label htmlFor="num2" className="MR-1">
             Num 2 :
           </label>
-          <input type="text" id="num2" value={num2} onInput={onNum2Change} />
+          <input
+            type="text"
+            className="border px-3 py-2 rounded"
+            id="num2"
+            value={num2}
+            onInput={onNum2Change}
+          />
         </div>
 
         <div>
           <p id="result">Result: {result}</p>
         </div>
+
         <button
           type="button"
-          className="p-2 bg-blue border-none text-white width-15rem"
+          className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           onClick={add}
         >
           Add
