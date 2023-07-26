@@ -87,7 +87,6 @@ function Products() {
           );
         })}
       </div>
-      <footer className="bg-amber-300 text-center	">Contact : 9929209856</footer>
     </>
   );
 }
