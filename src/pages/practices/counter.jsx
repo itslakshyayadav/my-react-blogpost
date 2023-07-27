@@ -5,11 +5,11 @@ export default function Counter() {
 
   function incrementCounter() {
     console.log("incre called");
-    const newValue = counter + 1;
+    let newValue = counter + 1;
     setCounter(newValue);
   }
   function resetScreen() {
-    setCounter("");
+    setCounter(0);
   }
   return (
     <div className="flex flex-col gap-2 ">
