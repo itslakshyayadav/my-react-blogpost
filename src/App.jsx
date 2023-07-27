@@ -13,6 +13,7 @@ function App() {
         <Home
           name="Lakshya yadav"
           heading="Enter the text to analyze below"
+          subtext="Your Text Summary"
         ></Home>
         {/* <Portfolio
             fullName="Lakshya Yadav"
