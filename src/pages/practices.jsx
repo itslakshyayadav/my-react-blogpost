@@ -16,6 +16,9 @@ export default function Practice() {
         <Link className="border-2 py-3 px-5" to="/practices/numberwriter">
           Numberwriter
         </Link>
+        <Link className="border-2 py-3 px-5" to="/practices/elements">
+          Elements
+        </Link>
       </div>
 
       <Outlet></Outlet>

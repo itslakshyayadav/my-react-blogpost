@@ -57,7 +57,7 @@ function Home(props) {
         <button
           id=""
           type="button"
-          className=" my-5 rounded-xl	bg-sky-400	p-4 text-white"
+          className=" my-5 rounded-xl	bg-sky-400	p-4 text-white btn-success"
           onClick={clearScreen}
         >
           Clear
