@@ -63,16 +63,20 @@ function Home(props) {
           Clear
         </button>
       </div>
-      <div className="container">
+      <div className="container border-2 border-red-500 rounded-sm">
         <h1 className=" text-lg p-8 container">
-          Your Text Summary :
+          <b>Your Text Summary :</b>
           <p className="inline">
             {analyzerModel.split(" ").length} words and {analyzerModel.length}
             characters.
           </p>
-          <p>Read Time : {0.008 * analyzerModel.split(" ").length}</p>
-          <h1>Preview:</h1>
-          <p>{analyzerModel}</p>
+          <p>
+            <b>Read Time :</b> {0.008 * analyzerModel.split(" ").length}
+          </p>
+          <h1>
+            <b>Preview:</b>
+            <p>{analyzerModel}</p>
+          </h1>
         </h1>
       </div>
     </div>

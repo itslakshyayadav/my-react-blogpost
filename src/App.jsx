@@ -10,11 +10,7 @@ function App() {
   return (
     <>
       <div className="container mx-auto">
-        <Home
-          name="Lakshya yadav"
-          heading="Enter the text to analyze below"
-          subtext="Your Text Summary"
-        ></Home>
+        <Home heading="Enter the text to analyze below"></Home>
         {/* <Portfolio
             fullName="Lakshya Yadav"
             address="Kota, RJ"
