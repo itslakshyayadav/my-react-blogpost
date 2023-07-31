@@ -21,6 +21,7 @@ function Home() {
             Practices
           </Link>
         </div>
+        <div></div>
         <div className="container mx-auto">
           <Outlet></Outlet>
         </div>
