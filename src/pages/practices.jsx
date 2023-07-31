@@ -5,19 +5,19 @@ export default function Practice() {
     <div className="border bg-red-50 p-8">
       <div className="flex my-4 gap-2">
         <Link className="border-2 py-3 px-5" to="/practices/change-color">
-          Color change
+          <b>Color change</b>
         </Link>
         <Link className="border-2 py-3 px-5" to="/practices/counter">
-          Counter
+          <b>Counter</b>
         </Link>
         <Link className="border-2 py-3 px-5" to="/practices/typewriter">
-          Typewriter
+          <b>Typewriter</b>
         </Link>
         <Link className="border-2 py-3 px-5" to="/practices/numberwriter">
-          Numberwriter
+          <b>Numberwriter</b>
         </Link>
         <Link className="border-2 py-3 px-5" to="/practices/elements">
-          Elements
+          <b>Predict Age</b>
         </Link>
       </div>
 

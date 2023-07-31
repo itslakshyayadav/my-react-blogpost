@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 
 function Home() {
   return (
-    <>
+    <div>
       <div className="">
         <div className="flex gap-3 p-3 bg-gray-950">
           <Link className="border text-white py-3 px-5" to="/blog">
@@ -25,7 +25,7 @@ function Home() {
           <Outlet></Outlet>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

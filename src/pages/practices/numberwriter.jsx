@@ -1,24 +1,48 @@
 import { useState } from "react";
 
-export default function numberwriter() {
+export default function Numberwriter() {
   const defaultValue = "15/12/2002.";
+  const [numberWriter, setNumberWriter] = useState(defaultValue);
+  const [myStyle, setMyStyle] = useState({
+    color: "black",
+    backgroundColor: "white",
+  });
+  const [btnText, setBtnText] = useState("Enable Dark Mode");
 
-  const [numberwriter, setNumberWriter] = useState(defaultValue);
   function printNumber(letter) {
-    const newValue = numberwriter + letter;
+    const newValue = numberWriter + letter;
     setNumberWriter(newValue);
   }
+
+  const darkModeBtn = () => {
+    if (myStyle.color === "black") {
+      setMyStyle({
+        color: "white",
+        backgroundColor: "black",
+      });
+      setBtnText("Enable Light Mode");
+    } else {
+      setMyStyle({
+        color: "black",
+        backgroundColor: "white",
+        border: "2px solid black",
+      });
+      setBtnText("Enable Dark Mode");
+    }
+  };
+
   function clearScreen() {
     setNumberWriter("");
   }
+
   function resetScreen() {
     setNumberWriter(defaultValue);
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col border-2 p-5" style={myStyle}>
       <div id="result" className="py-1">
-        Typed Number : {numberwriter}
+        Typed Number : {numberWriter}
       </div>
       <div className="flex gap-2 ">
         <button
@@ -76,24 +100,40 @@ export default function numberwriter() {
           6
         </button>
       </div>
-      <button
-        type="button"
-        className="border bg-blue-100 my-5 rounded-md px-5 py-3 max-w-xl"
-        onClick={function () {
-          clearScreen();
-        }}
-      >
-        Clear
-      </button>
-      <button
-        type="button"
-        className="border bg-blue-100 my-5 rounded-md px-5 py-3 max-w-xl"
-        onClick={function () {
-          resetScreen();
-        }}
-      >
-        Reset
-      </button>
+      <div className="flex justify-between 	">
+        <div className="flex gap-2">
+          <button
+            style={myStyle}
+            type="button"
+            className="border bg-blue-100 my-5 rounded-md px-5 py-3 max-w-xl"
+            onClick={function () {
+              clearScreen();
+            }}
+          >
+            Clear
+          </button>
+          <button
+            style={myStyle}
+            type="button"
+            className="border bg-blue-100 my-5 rounded-md px-5 py-3 max-w-xl"
+            onClick={function () {
+              resetScreen();
+            }}
+          >
+            Reset
+          </button>
+        </div>
+        <div className="flex">
+          <button
+            type="button"
+            className=" border bg-blue-100 my-5 rounded-md px-5 py-3 max-w-xl "
+            style={myStyle}
+            onClick={darkModeBtn}
+          >
+            {btnText}
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
