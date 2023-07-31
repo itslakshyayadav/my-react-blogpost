@@ -110,6 +110,7 @@ function Elements() {
       </div>
       <div className="flex justify-end">
         <button
+          style={myStyle}
           type="button"
           className=" border bg-blue-100 my-5 rounded-md px-5 py-3 max-w-xl "
           onClick={darkModeBtn}

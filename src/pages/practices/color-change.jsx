@@ -13,14 +13,14 @@ function ColorChange() {
     <div className="flex bg-gray-200 flex-col gap-4 items-center p-2">
       <div
         id="resultBox"
-        className={`flex justify-center items-center border h-48 w-48 ${boxColor}`}
+        className={`flex justify-center text-black items-center border h-48 w-48 ${boxColor}`}
       >
         Result box
       </div>
-      <div className="flex flex-wrap gap-3 ">
+      <div className="flex flex-wrap gap-3 text-black ">
         <button
           type="button"
-          className="bg-emerald-600 h-48 w-48 text-white flex justify-center items-center"
+          className="bg-emerald-600 h-48 w-48 flex justify-center items-center"
           onClick={function () {
             changeColor("emerald");
           }}
@@ -29,7 +29,7 @@ function ColorChange() {
         </button>
         <button
           type="button"
-          className="bg-blue-600 h-48 w-48 text-white flex justify-center items-center"
+          className="bg-blue-600 h-48 w-48 flex justify-center items-center"
           onClick={function () {
             changeColor("blue");
           }}
@@ -38,7 +38,7 @@ function ColorChange() {
         </button>
         <button
           type="button"
-          className="bg-pink-600 h-48 w-48 text-white flex justify-center items-center"
+          className="bg-pink-600 h-48 w-48  flex justify-center items-center"
           onClick={function () {
             changeColor("pink");
           }}

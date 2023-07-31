@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 
 export default function Practice() {
   return (
-    <div className="border bg-red-50 p-8">
+    <div className="border bg-black text-white p-8">
       <div className="flex my-4 gap-2">
         <Link className="border-2 py-3 px-5" to="/practices/change-color">
           <b>Color change</b>

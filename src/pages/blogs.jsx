@@ -1,9 +1,8 @@
 function Blog() {
   return (
     <>
-      <div>
-        <h1>This is a blog page.</h1>
-        <div>I'm going to write a lot of blogs here.</div>
+      <div className="bg-green-100 p-2" role="alert">
+        This is a <b>success</b> alert - check it out!
       </div>
     </>
   );

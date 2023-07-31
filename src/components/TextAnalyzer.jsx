@@ -1,12 +1,13 @@
 import { useState } from "react";
 
 function Home(props) {
-  // const defaultValue = "lakshya";
   const [analyzerModel, setAnalyzerModel] = useState("");
+
   const [myStyle, setMyStyle] = useState({
     color: "black",
     backgroundColor: "white",
   });
+
   const [btnText, setBtn] = useState("Enable Dark Mode");
   const darkModeBtn = () => {
     if (myStyle.color === "black") {
@@ -21,13 +22,11 @@ function Home(props) {
         backgroundColor: "white",
         // border: "2px solid black",
       });
-      setBtn("Enable White Mode");
+      setBtn("Enable Dark Mode");
     }
   };
 
   function onTextAreaInput(event) {
-    console.log(`event`);
-    // console.log(event.target.value);
     const value = event.target.value;
     setAnalyzerModel(value);
   }
@@ -37,13 +36,26 @@ function Home(props) {
     const uppValue = analyzerModel.toUpperCase();
     setAnalyzerModel(uppValue);
   }
+
   function changeLowerCase() {
     const lowValue = analyzerModel.toLowerCase();
     setAnalyzerModel(lowValue);
   }
+
   function clearScreen() {
     setAnalyzerModel("");
   }
+
+  const copyText = () => {
+    let text = document.getElementById("analyzerArea");
+    text.select();
+    navigator.clipboard.writeText(text.value);
+  };
+
+  const removerExtraSpaces = () => {
+    let newtext = analyzerModel.split(/[ ]+/);
+    setAnalyzerModel(newtext.join(" "));
+  };
 
   return (
     <div className="p-8 conatiner" style={myStyle}>
@@ -53,8 +65,8 @@ function Home(props) {
           className="border-2 border-red-400 p-5"
           style={myStyle}
           id="analyzerArea"
-          cols="60"
-          rows="5"
+          cols="100"
+          rows="4"
           value={analyzerModel}
           onInput={onTextAreaInput}
         ></textarea>
@@ -81,6 +93,22 @@ function Home(props) {
             style={myStyle}
             type="button"
             className=" my-5 border-2 rounded-xl	bg-sky-400	p-4 text-white btn-success"
+            onClick={copyText}
+          >
+            Copy-text
+          </button>
+          <button
+            style={myStyle}
+            type="button"
+            className=" my-5 border-2 rounded-xl	bg-sky-400	p-4 text-white btn-success"
+            onClick={removerExtraSpaces}
+          >
+            Remove-ExtraSpaces
+          </button>
+          <button
+            style={myStyle}
+            type="button"
+            className=" my-5 border-2 rounded-xl	bg-sky-400	p-4 text-white btn-success"
             onClick={clearScreen}
           >
             Clear
@@ -97,7 +125,7 @@ function Home(props) {
           </button>
         </div>
       </div>
-      <div className="container border-2 border-red-500 rounded-sm">
+      <div className="container  rounded-sm">
         <h1 className=" text-lg p-8 container">
           <b>Your Text Summary :</b>
           <p className="inline">
