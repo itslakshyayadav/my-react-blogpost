@@ -3,7 +3,7 @@ function AddUser() {
   const [userModel, setUserModel] = useState({
     firstName: "",
     lastName: "",
-    age: null,
+    age: "",
   });
 
   const onValueChange = (event, fieldName) => {
@@ -53,6 +53,7 @@ function AddUser() {
         <div className="flex flex-col">
           <label htmlFor="firstName">First Name*</label>
           <input
+            className="px-2 p-1"
             type="text"
             name="firstName"
             required
@@ -66,6 +67,7 @@ function AddUser() {
         <div className="flex flex-col">
           <label htmlFor="lastName">Last Name*</label>
           <input
+            className="px-2 p-1"
             type="text"
             name="lastName"
             required
@@ -76,9 +78,20 @@ function AddUser() {
             placeholder="Enter last name"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col ">
           <label htmlFor="age">Age*</label>
-          <input type="text" name="age" required placeholder="Enter age" />
+
+          <input
+            className="px-2 p-1"
+            type="text"
+            name="age"
+            required
+            value={userModel.age}
+            onInput={(event) => {
+              onValueChange(event, "age");
+            }}
+            placeholder="Enter age"
+          />
         </div>
 
         <button className="px-5 py-3 my-5 bg-slate-200" type="submit">
