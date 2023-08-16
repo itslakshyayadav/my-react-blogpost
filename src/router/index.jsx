@@ -7,6 +7,7 @@ import TextAnalyzer from "../components/TextAnalyzer";
 import Practices from "../pages/practices";
 import ColorChange from "../pages/practices/color-change";
 import Counter from "../pages/practices/counter";
+import CounterClass from "../pages/practices/counter-class";
 import Typewriter from "../pages/practices/typewriter";
 import Numberwriter from "../pages/practices/numberwriter";
 import Elements from "../pages/practices/elements";
@@ -30,12 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/example",
-        element: (
-          <TextAnalyzer
-            name="Lakshya yadav"
-            heading="Enter the text to analyze below"
-          />
-        ),
+        element: <TextAnalyzer heading="Enter the text to analyze below" />,
       },
       {
         path: "/practices",
@@ -44,6 +40,10 @@ const router = createBrowserRouter([
           {
             path: "/practices/change-color",
             element: <ColorChange />,
+          },
+          {
+            path: "/practices/counter-class",
+            element: <CounterClass />,
           },
           {
             path: "/practices/counter",

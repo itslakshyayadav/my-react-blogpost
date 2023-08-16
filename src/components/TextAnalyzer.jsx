@@ -50,6 +50,7 @@ function Home(props) {
     let text = document.getElementById("analyzerArea");
     text.select();
     navigator.clipboard.writeText(text.value);
+    document.getSelection().removeAllRanges();
   };
 
   const removerExtraSpaces = () => {
@@ -60,9 +61,9 @@ function Home(props) {
   return (
     <div className="p-8 conatiner" style={myStyle}>
       <h1 className="text-center text-5xl p-8 container">{props.heading}</h1>
-      <div className="flex justify-center border-2	 border-orange-400 p-8 rounded-xl">
+      <div className="flex justify-center border-2 border-orange-900 p-8 rounded-xl">
         <textarea
-          className="border-2 border-red-400 p-5"
+          className="border-2 border-red-700 p-5"
           style={myStyle}
           id="analyzerArea"
           cols="100"
@@ -72,7 +73,7 @@ function Home(props) {
         ></textarea>
       </div>
       <div className="flex justify-between ">
-        <div className="flex gap-3">
+        <div className="flex gap-3 py-4">
           <button
             style={myStyle}
             type="button"
@@ -114,7 +115,7 @@ function Home(props) {
             Clear
           </button>
         </div>
-        <div>
+        <div className="py-4">
           <button
             style={myStyle}
             type="button"
@@ -125,15 +126,24 @@ function Home(props) {
           </button>
         </div>
       </div>
-      <div className="container  rounded-sm">
-        <h1 className=" text-lg p-8 container">
+      <div className="rounded-sm">
+        <h1 className=" text-lg py-5 ">
           <b>Your Text Summary :</b>
           <p className="inline">
-            {analyzerModel.split(" ").length} words and {analyzerModel.length}
+            {
+              analyzerModel.split(" ").filter((element) => {
+                return element.length !== 0;
+              }).length
+            }{" "}
+            words and {analyzerModel.length}
             characters.
           </p>
           <p>
-            <b>Read Time :</b> {0.008 * analyzerModel.split(" ").length}
+            <b>Read Time :</b>{" "}
+            {0.008 *
+              analyzerModel.split(" ").filter((element) => {
+                return element.length !== 0;
+              }).length}
           </p>
           <h1>
             <b>Preview:</b>
