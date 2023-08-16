@@ -11,6 +11,7 @@ import CounterClass from "../pages/practices/counter-class";
 import Typewriter from "../pages/practices/typewriter";
 import Numberwriter from "../pages/practices/numberwriter";
 import Elements from "../pages/practices/elements";
+import AddUser from "../pages/practices/add-user";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
           {
             path: "/practices/elements",
             element: <Elements />,
+          },
+          {
+            path: "/practices/add-user",
+            element: <AddUser />,
           },
         ],
       },
