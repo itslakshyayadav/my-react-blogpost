@@ -22,6 +22,12 @@ export default function Practice() {
         <Link className="border-2 py-3 px-5" to="/practices/add-user">
           <b>Add User</b>
         </Link>
+        <Link className="border-2 py-3 px-5" to="/practices/post-title">
+          <b>Post Title</b>
+        </Link>
+        <Link className="border-2 py-3 px-5" to="/practices/todo-select">
+          <b>Todo Select</b>
+        </Link>
       </div>
 
       <Outlet></Outlet>

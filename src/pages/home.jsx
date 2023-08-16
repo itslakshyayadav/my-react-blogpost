@@ -43,28 +43,19 @@ export default function Home() {
             Practices
           </Link>
         </div>
-        <div>
-          <div className="flex w-96 justify-end items-center	 h-24 px-2 gap-3">
-            <button type="button" className="bg-red-900 w-8 h-8 "></button>
-            <button type="button" className="bg-blue-900 w-8 h-8 "></button>
-            <button type="button" className="bg-green-900 w-8 h-8 "></button>
-            <button type="button" className="bg-cyan-900 w-8 h-8 "></button>
-            <button type="button" className="bg-yellow-900 w-8 h-8 "></button>
 
-            <button
-              style={myStyle}
-              type="button"
-              className="my-5 border	px-1 py-1"
-              onClick={darkModeBtn}
-            >
-              {btnText}
-            </button>
-          </div>
-        </div>
+        <button
+          style={myStyle}
+          type="button"
+          className="my-5 border px-5 py-3"
+          onClick={darkModeBtn}
+        >
+          {btnText}
+        </button>
       </div>
-      <div className="bg-green-100 p-2 text-center" role="alert">
+      {/* <div className="bg-green-100 p-2 text-center" role="alert">
         This is a <b>success</b> alert - check it out!
-      </div>
+      </div> */}
       <div className="container mx-auto">
         <Outlet></Outlet>
       </div>

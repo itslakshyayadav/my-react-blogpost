@@ -12,6 +12,8 @@ import Typewriter from "../pages/practices/typewriter";
 import Numberwriter from "../pages/practices/numberwriter";
 import Elements from "../pages/practices/elements";
 import AddUser from "../pages/practices/add-user";
+import PostTitle from "../pages/practices/post-title";
+import TodoSelect from "../pages/practices/todo-select";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +67,14 @@ const router = createBrowserRouter([
           {
             path: "/practices/add-user",
             element: <AddUser />,
+          },
+          {
+            path: "/practices/post-title",
+            element: <PostTitle />,
+          },
+          {
+            path: "/practices/todo-select",
+            element: <TodoSelect />,
           },
         ],
       },
